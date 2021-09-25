@@ -1,0 +1,134 @@
+/* NAVBAR */
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@500&display=swap");
+
+.main-head {
+  background: #004e35;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Kaisei HarunoUmi", serif;
+  font-size: 20px;
+  letter-spacing: 1.4px;
+  line-height: 15px;
+  color: #fff;
+}
+
+.logo-subtitle {
+  color: #cdcdcd;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-top: 3px;
+}
+
+.mobile-menu {
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+.navbar {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #fff;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.navbar a:hover {
+  color: #bdbdbd;
+}
+
+.navbar a.active {
+  border-bottom: 2px solid #fff;
+}
+
+.nav-links {
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  position: absolute;
+  background-color: #004e35;
+  left: 0;
+  top: 80px;
+  width: 100%;
+  height: 0vh;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links.show {
+  height: 30vh;
+}
+
+.theme-toggle {
+  z-index: 101;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  animation: toggle 0.2s ease;
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  transform: translate(-50%, -13px);
+}
+
+@media screen and (min-width: 40rem) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    min-height: 10vh;
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    margin-top: 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    position: static;
+    flex-direction: row;
+    width: 50%;
+    height: 5vh;
+  }
+
+  .nav-links.show {
+    height: 5vh;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .theme-toggle {
+    top: 50px;
+  }
+}

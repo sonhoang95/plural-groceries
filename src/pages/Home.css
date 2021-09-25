@@ -1,0 +1,212 @@
+/* Homepage */
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@700&family=Poppins:wght@400;700&display=swap");
+
+.home-layout {
+  min-height: 65vh;
+  margin: 0 0 0 auto;
+  overflow: hidden;
+  background-image: url("../images/home.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0 4px 20px -12px gray;
+}
+
+.btn-default {
+  font-family: "Poppins", sans-serif;
+}
+
+.home-introduction {
+  width: 90%;
+  background-color: #fff;
+  padding: 3em;
+  color: #000;
+  max-width: 400px;
+  position: absolute;
+  bottom: 0;
+}
+
+.home-introduction h1 {
+  font-size: 2.3rem;
+  line-height: 1.2em;
+  margin: 0 0 0.5em;
+  font-weight: 400;
+  font-family: "Kaisei HarunoUmi", serif;
+}
+
+.home-introduction p {
+  margin-bottom: 2em;
+  font-size: 0.8rem;
+}
+
+.home-introduction span {
+  color: #2c8747;
+  font-size: 0.9rem;
+}
+
+.accent-text {
+  padding: 0 5px;
+}
+
+.intro,
+.mission {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.section-container,
+.mission-container {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.intro-text,
+.mission-text {
+  color: #121212;
+  font-family: "Kaisei HarunoUmi", serif;
+  letter-spacing: 1px;
+  max-width: 700px;
+}
+
+.intro-text h1,
+.mission-text h1 {
+  font-size: 1.5rem;
+  margin: 0.5em 0;
+}
+
+.intro-text p,
+.mission-text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #555;
+  padding-bottom: 2rem;
+}
+
+.intro-image-container,
+.mission-image-container {
+  position: relative;
+  z-index: 0;
+}
+
+.intro-image-container::before,
+.mission-image-container::before {
+  content: "";
+  display: block;
+  background-color: #004e35;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  transform: translate(-0.6rem, -0.6rem);
+  z-index: -1;
+}
+
+.mission-image-container::before {
+  right: -1.3rem;
+  bottom: -1.3rem;
+}
+
+.intro-image-container img,
+.mission-image-container img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.mission img {
+  margin-top: 2rem;
+}
+
+.location {
+  background-color: #f8f7f5;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.location a {
+  color: #004e35;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.arrow-icon {
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+/* .mission {
+  background-image: ;
+} */
+
+@media screen and (min-width: 40rem) {
+  .home-introduction {
+    max-width: 750px;
+  }
+
+  .home-introduction h1 {
+    font-size: 3.5rem;
+  }
+
+  .home-introduction p {
+    margin-bottom: 2em;
+    font-size: 1rem;
+  }
+
+  .home-introduction span {
+    color: #2c8747;
+  }
+
+  .accent-text {
+    font-size: 1rem;
+    padding: 0 5px;
+  }
+
+  .intro {
+    width: 100vw;
+  }
+
+  .section-container,
+  .mission-container {
+    grid-template-columns: 2fr 1fr;
+    place-items: center;
+    padding: 4em;
+    gap: 1.5em;
+  }
+
+  .mission-container {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .intro-text,
+  .mission-text {
+    flex: 1 1 700px;
+    max-width: 750px;
+    margin-left: 2em;
+    justify-self: start;
+    align-self: start;
+  }
+
+  .intro-text h1,
+  .mission-text h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+
+  .intro-text p,
+  mission-text p {
+    font-size: 1rem;
+  }
+
+  .intro-image-container::before,
+  .mission-image-container::before {
+    width: 10rem;
+    height: 10rem;
+  }
+}

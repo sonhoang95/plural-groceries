@@ -1,13 +1,154 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --white: #fff;
+  --black: #000;
+
+  /* Primary colors*/
+  --primary-1: #004e35;
+  --primary-2: #4a9f66;
+  --primary-3: #b1cef0;
+  --primary-4: #b1cef0;
+  --primary-5: #e5f0f9;
+
+  /* Neutral colors */
+  --neutral-1: #2c2c2c;
+  --neutral-2: #434343;
+  --neutral-3: #94868b;
+  --neutral-4: #d9cfd3;
+  --neutral-5: #f2ecee;
+
+  /* Accent-blue colors */
+  --accent-1: #bb0240;
+  --accent-2: #c43464;
+  --accent-3: #de7699;
+  --accent-4: #e6c3ce;
+  --accent-5: #fff2f7;
+
+  --surface-color: white;
+  --surface-shadow: #c4c4c4;
+}
+
+body {
+  background-color: #fbfbfb;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  color: #222;
+}
+
+body.dark {
+  background-color: #141414;
+  color: white;
+  --neutral-5: #333;
+  --surface-color: #444;
+  --surface-shadow: #222;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+p {
+  line-height: 30px;
+  font-size: 18px;
+}
+
+a {
+  color: var(--primary-2);
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* BUTTONS */
+.btn {
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px 40px;
+  border: none;
+  /* transition: background-color 200ms, color 200ms; */
+}
+
+.btn-default {
+  color: var(--white);
+  background: linear-gradient(to bottom, #00be81 0%, #009e6c 100%);
+}
+
+.btn-outline {
+  color: var(--white);
+  background: linear-gradient(to bottom, #00be81 0%, #009e6c 100%);
+  padding: 12px 55px;
+  border-radius: 3px;
+  font-size: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 5px 10px 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-default:hover,
+.btn-outline:hover {
+  color: var(--white);
+  background: linear-gradient(to top, #00be81 0%, #009e6c 100%);
+  text-decoration: underline;
+}
+
+.btn-default:active,
+.btn-outline:active {
+  color: var(--white);
+  background: linear-gradient(180deg, #009e6c 0%, #00be81 100%);
+}
+
+.btn-default[disabled],
+.btn-outline[disabled] {
+  color: var(--primary-4);
+  background-color: var(--primary-5);
+  cursor: default;
+}
+
+.btn-accent {
+  color: #004e35 !important;
+  padding: 10px 28px;
+  border: none;
+  background-color: #fbfbfb;
+}
+
+.btn-accent:hover {
+  color: #004e35;
+  background-color: #d8d8d8;
+  text-decoration: none;
+}
+
+.btn-accent:active {
+  color: #004e35;
+  background-color: #d8d8d8;
+}
+
+.btn-accent[disabled] {
+  color: var(--accent-4);
+  background-color: var(--accent-5);
+  cursor: default;
 }

@@ -1,0 +1,22 @@
+.products-layout {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.accent-text {
+  color: var(--primary-2);
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.products-grid {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+}
