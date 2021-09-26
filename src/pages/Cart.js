@@ -4,7 +4,8 @@ import Input from "../components/Input"
 import { loadStripe } from "@stripe/stripe-js"
 import "./Cart.css"
 
-const stripeAccessKey = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY
+const stripeAccessKey =
+  "pk_test_51JYsPXJ9mAPhFO3sxyNRbkOaMJ2jXcRHOmG9qlxuQr5LhCA8T8lcBxJnipRzmOikll4bhc63CoMKEDdjnUcaLxHP00SoKs99kl"
 
 export default function Cart({ cart }) {
   const [email, setEmail] = useState("")
@@ -23,8 +24,8 @@ export default function Cart({ cart }) {
           lineItems: lineItems,
           mode: "payment",
           customerEmail: email,
-          successUrl: "https://react-tutorial.app/app.html",
-          cancelUrl: "https://react-tutorial.app/app.html",
+          successUrl: "https://plural-groceries.netlify.app",
+          cancelUrl: "https://plural-groceries.netlify.app",
         })
         .then(response => {
           // this will only log if the redirect did not work
